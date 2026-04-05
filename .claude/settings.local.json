@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv/Scripts/python -c \"import transformers; print\\(transformers.__version__\\)\")",
+      "Bash(.venv/Scripts/python -c \"from transformers import AutoTokenizer; print\\(''OK''\\)\")",
+      "Bash(.venv/Scripts/python -c \"from transformers import AutoModelForCausalLM; print\\(''OK''\\)\")",
+      "Bash(.venv/Scripts/python -c \"import torch; print\\(torch.__version__\\)\")",
+      "Bash(winget install:*)",
+      "Bash(.venv/Scripts/python -c \"from dotenv import load_dotenv; load_dotenv\\(override=True\\); import os; key=os.getenv\\(''OPENAI_API_KEY''\\); print\\(f''Key exists: {bool\\(key\\)}, starts with: {key[:8] if key else \"\"N/A\"\"}''\\)\")",
+      "Bash(where clang++)",
+      "Read(//c/Program Files/LLVM/bin/**)",
+      "Bash(powershell -Command \"[Environment]::SetEnvironmentVariable\\(''Path'', [Environment]::GetEnvironmentVariable\\(''Path'', ''User''\\) + '';C:\\\\Program Files\\\\LLVM\\\\bin'', ''User''\\)\")",
+      "Bash(clang++ -std=c++17 -O3 -march=native -DNDEBUG main.cpp -o main.exe)",
+      "Bash(g++ -std=c++17 -O3 -march=native -DNDEBUG main.cpp -o main.exe)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(g++ -std=c++17 -O3 main.cpp -o main.exe)",
+      "Bash(\"C:/msys64/ucrt64/bin/g++.exe\" -std=c++17 -O3 main.cpp -o main.exe)",
+      "Bash(\"C:/msys64/ucrt64/bin/g++.exe\" -v)",
+      "Bash(echo $PATH)",
+      "Bash(./main.exe)",
+      "Bash(ls main*)",
+      "Bash(echo \"EXIT=$?\")",
+      "Bash(g++ main.cpp)",
+      "Bash(g++ main.cpp -o test.exe)",
+      "Read(//tmp/**)",
+      "Bash(./test.exe)",
+      "Bash(g++ -v /tmp/hello.cpp -o /tmp/hello.exe)",
+      "Bash(as --version)",
+      "Bash(ld --version)",
+      "Bash(gcc -v minimal.c -o minimal.exe)",
+      "Bash(git remote:*)"
+    ]
+  }
+}
